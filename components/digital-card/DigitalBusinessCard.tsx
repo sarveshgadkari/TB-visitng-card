@@ -16,10 +16,13 @@ export function DigitalBusinessCard({ startOnBack = false }: { startOnBack?: boo
         <ContactGrid />
         <ConnectSection />
       </div>
-      <a href={poweredBy.url} target="_blank" rel="noopener noreferrer" className="stage-foot powered-by">
-        <span>Powered by</span>
-        <Image src={poweredBy.mark} alt="" width={316} height={231} className="h-auto w-[22px]" />
-        <span className="font-semibold tracking-[0.18em]">{poweredBy.name}</span>
+      <a href={poweredBy.url} target="_blank" rel="noopener noreferrer" className="powered-by">
+        <span className="powered-by-pitch">Want a digital card like this for your business?</span>
+        <span className="powered-by-brand">
+          <span>Powered by</span>
+          <Image src={poweredBy.mark} alt="" width={316} height={231} className="h-auto w-[22px]" />
+          <span className="font-semibold tracking-[0.18em]">{poweredBy.name}</span>
+        </span>
       </a>
     </div>
   );

@@ -39,7 +39,7 @@ export function ShareSheet({ open, onClose }: { open: boolean; onClose: () => vo
 
   async function onCopy() {
     const ok = await copyCardLink();
-    setNotice(ok ? "Link copied." : "Select the address below and copy it.");
+    setNotice(ok ? "Message copied, including Powered by Mulsetu." : "Select the address below and copy it.");
   }
 
   // Portalled to <body>: the trigger sits inside dark, white-text sections and inside
@@ -72,6 +72,7 @@ export function ShareSheet({ open, onClose }: { open: boolean; onClose: () => vo
           TLBISBIG
         </p>
         <p className="mt-2 text-[13px] font-medium text-leaf">{cardLabel}</p>
+        <p className="mt-2 text-[12.5px] leading-snug text-muted">The note you send includes a Powered by Mulsetu link.</p>
         <div className="mt-5 grid gap-2.5">
           <button
             type="button"

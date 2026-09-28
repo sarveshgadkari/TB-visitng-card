@@ -1,4 +1,4 @@
-import { profile, shareMessage, shareTitle } from "@/lib/profile";
+import { shareMessage, shareTitle } from "@/lib/profile";
 
 export const cardPhotoPath = "/share-card.png";
 
@@ -19,13 +19,12 @@ export async function loadCardPhoto() {
 /** Shares the card photo with the message and link as its caption, or just the link where files can't be shared. */
 export async function shareCard(photo?: File | null) {
   if (typeof navigator === "undefined" || typeof navigator.share !== "function") return "unavailable" as const;
-  const pageUrl = profile.profileUrl;
   try {
     if (photo && navigator.canShare?.({ files: [photo] })) {
-      // With a file attached many apps drop the separate `url` field, so the link goes in the text.
-      await navigator.share({ files: [photo], title: shareTitle, text: `${shareMessage}\n${pageUrl}` });
+      // With a file attached many apps drop the separate `url` field, so the full note goes in the text.
+      await navigator.share({ files: [photo], title: shareTitle, text: shareMessage });
     } else {
-      await navigator.share({ title: shareTitle, text: shareMessage, url: pageUrl });
+      await navigator.share({ title: shareTitle, text: shareMessage });
     }
     return "shared" as const;
   } catch (error) {
@@ -35,7 +34,7 @@ export async function shareCard(photo?: File | null) {
 }
 
 export async function copyCardLink() {
-  const value = profile.profileUrl;
+  const value = shareMessage;
   try {
     if (navigator.clipboard?.writeText) {
       await navigator.clipboard.writeText(value);
@@ -61,5 +60,5 @@ export async function copyCardLink() {
 }
 
 export function whatsAppCardUrl() {
-  return `https://wa.me/?text=${encodeURIComponent(`${shareMessage}\n${profile.profileUrl}`)}`;
+  return `https://wa.me/?text=${encodeURIComponent(shareMessage)}`;
 }

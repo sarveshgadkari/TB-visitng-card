@@ -28,10 +28,14 @@ export const shareTitle = "Terence L. Bolden — Founder, TLBISBIG";
 export const shareText =
   "Digital visiting card of Terence L. Bolden, Founder of TLBISBIG Consulting Group. Save the contact or open terence.tlbisbig.world.";
 
-/** The personal note sent along with the link when someone shares the card (the link is appended by the share target). */
+/** The personal note sent when someone shares the card, including the Mulsetu credit and both links. */
 export const shareMessage = [
   "Hi! Here's my digital visiting card.",
   "",
   `${profile.name} — ${profile.title}, ${profile.company}`,
   "Tap the link to view my card and save my contact:",
+  profile.profileUrl,
+  "",
+  `Powered by ${poweredBy.name} — digital visiting cards for your business`,
+  poweredBy.url,
 ].join("\n");
