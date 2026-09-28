@@ -30,7 +30,7 @@ export async function GET() {
         {/* Instagram and Facebook drop the share caption, so the card link is printed on the photo too. */}
         <div style={{ marginTop: 30, display: "flex", alignItems: "center", gap: 14, fontSize: 30, color: c.muted }}>
           Open my digital card
-          <div style={{ display: "flex", padding: "8px 24px", borderRadius: 999, backgroundImage: c.brand, color: "white", fontWeight: 700 }}>{cardLabel}</div>
+          <div style={{ display: "flex", padding: "8px 24px", borderRadius: 999, backgroundImage: c.brand, color: "#07080f", fontWeight: 700 }}>{cardLabel}</div>
         </div>
       </div>
     ),

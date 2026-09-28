@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     root: path.resolve(process.cwd()),
   },
   async rewrites() {
-    return [{ source: "/sarvesh-gadkari.vcf", destination: "/api/vcard" }];
+    return [{ source: "/terence-l-bolden.vcf", destination: "/api/vcard" }];
   },
 };
 

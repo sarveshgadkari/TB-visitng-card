@@ -10,14 +10,14 @@ const geist = Geist({ subsets: ["latin"], variable: "--font-geist", display: "sw
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-cormorant", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sarvesh.mulsetu.com"),
-  applicationName: "Mulsetu ID",
+  metadataBase: new URL("https://terence.tlbisbig.world"),
+  applicationName: "TLBISBIG",
   title: { default: shareTitle, template: "%s" },
   description: shareText,
   alternates: { canonical: profile.profileUrl },
   appleWebApp: {
     capable: true,
-    title: "Mulsetu ID",
+    title: "TLBISBIG",
     statusBarStyle: "default",
   },
   icons: {
@@ -25,21 +25,21 @@ export const metadata: Metadata = {
     apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
-    title: "Sarvesh Gadkari — Founder & CEO | Mulsetu",
+    title: "Terence L. Bolden — Founder | TLBISBIG",
     description: shareText,
     url: profile.profileUrl,
-    siteName: "Mulsetu",
+    siteName: "TLBISBIG",
     type: "profile",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sarvesh Gadkari — Founder & CEO | Mulsetu",
+    title: "Terence L. Bolden — Founder | TLBISBIG",
     description: shareText,
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f5f3ee",
+  themeColor: "#07080f",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",

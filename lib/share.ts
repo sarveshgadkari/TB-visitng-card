@@ -10,7 +10,7 @@ export async function loadCardPhoto() {
   try {
     const response = await fetch(cardPhotoPath);
     if (!response.ok) return null;
-    return new File([await response.blob()], "Sarvesh-Gadkari-Mulsetu-card.png", { type: "image/png" });
+    return new File([await response.blob()], "Terence-L-Bolden-TLBISBIG-card.png", { type: "image/png" });
   } catch {
     return null;
   }
@@ -19,12 +19,13 @@ export async function loadCardPhoto() {
 /** Shares the card photo with the message and link as its caption, or just the link where files can't be shared. */
 export async function shareCard(photo?: File | null) {
   if (typeof navigator === "undefined" || typeof navigator.share !== "function") return "unavailable" as const;
+  const pageUrl = profile.profileUrl;
   try {
     if (photo && navigator.canShare?.({ files: [photo] })) {
       // With a file attached many apps drop the separate `url` field, so the link goes in the text.
-      await navigator.share({ files: [photo], title: shareTitle, text: `${shareMessage}\n${profile.profileUrl}` });
+      await navigator.share({ files: [photo], title: shareTitle, text: `${shareMessage}\n${pageUrl}` });
     } else {
-      await navigator.share({ title: shareTitle, text: shareMessage, url: profile.profileUrl });
+      await navigator.share({ title: shareTitle, text: shareMessage, url: pageUrl });
     }
     return "shared" as const;
   } catch (error) {

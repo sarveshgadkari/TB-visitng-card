@@ -1,5 +1,5 @@
-const CACHE = "mulsetu-id-v3";
-const CORE = ["/", "/qr", "/branding/mulsetu-logo.png", "/profile/sarvesh-gadkari.jpg", "/icons/icon-192.png", "/icons/icon-512.png"];
+const CACHE = "tlbisbig-card-v1";
+const CORE = ["/", "/qr"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(CORE)).then(() => self.skipWaiting()));

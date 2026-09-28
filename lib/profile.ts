@@ -1,24 +1,32 @@
 export const profile = {
-  name: "Sarvesh Gadkari",
-  title: "Founder & CEO",
-  company: "Mulsetu Agrotech Private Limited",
-  email: "founder@mulsetu.com",
-  phone: "+918485860323",
-  whatsapp: "+918485860323",
-  linkedin: "https://www.linkedin.com/in/sarvesh-gadkari-071483259/",
-  website: "https://mulsetu.com",
-  profileUrl: "https://sarvesh.mulsetu.com/",
-  bio: "Founder & CEO of Mulsetu, building digital products, AI systems and business software for growing businesses.",
-  photo: "/profile/sarvesh-gadkari.jpg",
-  logo: "/branding/mulsetu-logo.png",
-  tagxUrl: "https://tagx.mulsetu.com/",
+  name: "Terence L. Bolden",
+  formalName: "T.L. Bryant Bolden",
+  title: "Founder",
+  company: "TLBISBIG Consulting Group",
+  location: "United States of America",
+  email: "pres@tlbenterprise.com",
+  phone: "+18507669073",
+  whatsapp: "+18507669073",
+  linkedin: "",
+  website: "https://www.tlbisbig.world/",
+  profileUrl: "https://terence.tlbisbig.world/",
+  bio: "Founder of TLBISBIG, a privately held global enterprise conglomerate delivering institutional-grade solutions across engineering, technology, sustainable agriculture, and strategic investment.",
+  photo: "/profile/terence-l-bolden.jpg",
+  logo: "/branding/tlbisbig-logo.png",
 } as const;
 
-export const cardLabel = "sarvesh.mulsetu.com";
+export const cardLabel = "terence.tlbisbig.world";
 
-export const shareTitle = "Sarvesh Gadkari — Founder & CEO, Mulsetu";
+export const poweredBy = {
+  name: "Mulsetu",
+  url: "https://mulsetu.com",
+  mark: "/branding/mulsetu-mark.png",
+} as const;
+
+export const shareTitle = "Terence L. Bolden — Founder, TLBISBIG";
 /** Page description used by search engines and link previews. */
-export const shareText = "Digital visiting card of Sarvesh Gadkari, Founder & CEO of Mulsetu. Save my contact, call, WhatsApp or email me directly.";
+export const shareText =
+  "Digital visiting card of Terence L. Bolden, Founder of TLBISBIG Consulting Group. Save the contact or open terence.tlbisbig.world.";
 
 /** The personal note sent along with the link when someone shares the card (the link is appended by the share target). */
 export const shareMessage = [

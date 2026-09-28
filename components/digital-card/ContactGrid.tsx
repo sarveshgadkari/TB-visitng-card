@@ -19,13 +19,12 @@ export function ContactGrid() {
   const tiles: Tile[] = [];
   const whatsapp = whatsappHref(profile.whatsapp);
   const call = phoneHref(profile.phone);
-  // Brand tones only (forest → pine → teal) so the grid reads as one set.
-  if (whatsapp) tiles.push({ label: "WhatsApp", href: whatsapp, external: true, tone: "#3e6700", icon: <WhatsAppIcon /> });
-  if (call) tiles.push({ label: "Call", href: call, tone: "#1d6848", icon: <Phone className="size-4" /> });
-  if (profile.email) tiles.push({ label: "Email", href: `mailto:${profile.email}`, tone: "#19686c", icon: <Mail className="size-4" /> });
-  if (profile.linkedin) tiles.push({ label: "LinkedIn", href: profile.linkedin, external: true, tone: "#3e6700", icon: <LinkedInIcon /> });
-  if (profile.website) tiles.push({ label: "Website", href: profile.website, external: true, tone: "#1d6848", icon: <Globe className="size-4" /> });
-  tiles.push({ label: "Share Card", tone: "#19686c", share: true, icon: <Share2 className="size-4" /> });
+  if (whatsapp) tiles.push({ label: "WhatsApp", href: whatsapp, external: true, tone: "#f0b429", icon: <WhatsAppIcon /> });
+  if (call) tiles.push({ label: "Call", href: call, tone: "#4f9cf9", icon: <Phone className="size-4" /> });
+  if (profile.email) tiles.push({ label: "Email", href: `mailto:${profile.email}`, tone: "#c8941f", icon: <Mail className="size-4" /> });
+  if (profile.linkedin) tiles.push({ label: "LinkedIn", href: profile.linkedin, external: true, tone: "#4f9cf9", icon: <LinkedInIcon /> });
+  if (profile.website) tiles.push({ label: "Website", href: profile.website, external: true, tone: "#f0b429", icon: <Globe className="size-4" /> });
+  tiles.push({ label: "Share Card", tone: "#4f9cf9", share: true, icon: <Share2 className="size-4" /> });
 
   return (
     <div className="contact-grid">

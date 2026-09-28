@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --mulsetu-green: #3e6700;
-  --mulsetu-leaf: #2f7a18;
-  --mulsetu-pine: #1d6848;
-  --mulsetu-teal: #19686c;
-  --mulsetu-lime: #c6ef86;
-  --mulsetu-ink: #16181d;
-  --mulsetu-muted: #5c635b;
-  --mulsetu-paper: #f3f1ea;
-  --mulsetu-card: #fbfaf5;
-  --mulsetu-line: rgba(22, 24, 29, 0.09);
-  --mulsetu-deep: linear-gradient(155deg, #23501a 0%, #163e30 52%, #0e3a40 100%);
-  --mulsetu-brand: linear-gradient(100deg, #3e6700 0%, #1d6848 58%, #19686c 100%);
+  /* Palette taken from tlbisbig.world */
+  --mulsetu-green: #f0b429;
+  --mulsetu-leaf: #ffca4a;
+  --mulsetu-pine: #c8941f;
+  --mulsetu-teal: #4f9cf9;
+  --mulsetu-lime: #ffca4a;
+  --mulsetu-ink: #e8eef8;
+  --mulsetu-muted: #8b97ad;
+  --mulsetu-paper: #07080f;
+  --mulsetu-card: #0f1220;
+  --mulsetu-line: rgba(255, 255, 255, 0.1);
+  --mulsetu-deep: linear-gradient(155deg, #0b0d1a 0%, #10162a 52%, #0c1c33 100%);
+  --mulsetu-brand: linear-gradient(135deg, #f0b429 0%, #ffca4a 100%);
   /* Fine paper grain, baked at low alpha so it can sit in any background stack. */
   --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   --space-1: 4px;
@@ -29,6 +30,7 @@
 
 @theme inline {
   --color-forest: var(--mulsetu-green);
+  --color-gold: #f0b429;
   --color-leaf: var(--mulsetu-leaf);
   --color-pine: var(--mulsetu-pine);
   --color-teal: var(--mulsetu-teal);
@@ -51,8 +53,8 @@ body {
   min-height: 100dvh;
   overflow-x: hidden;
   background:
-    radial-gradient(700px 360px at 50% -140px, rgba(62, 103, 0, 0.11), transparent 70%),
-    radial-gradient(560px 300px at 100% 100%, rgba(25, 104, 108, 0.09), transparent 65%),
+    radial-gradient(700px 360px at 50% -140px, rgba(240, 180, 41, 0.16), transparent 70%),
+    radial-gradient(560px 300px at 100% 100%, rgba(79, 156, 249, 0.14), transparent 65%),
     var(--mulsetu-paper);
   color: var(--mulsetu-ink);
   font-family: var(--font-geist), Geist, sans-serif;
@@ -111,7 +113,23 @@ body {
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(22, 24, 29, 0.42);
+  color: rgba(232, 238, 248, 0.42);
+}
+
+.powered-by {
+  display: inline-flex;
+  width: fit-content;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  opacity: 0.72;
+}
+
+.powered-by:hover {
+  opacity: 1;
+  color: #f0b429;
 }
 
 @media (min-width: 900px) {
@@ -215,29 +233,30 @@ body {
 }
 
 .card-face-front {
-  --frame: rgba(62, 103, 0, 0.16);
+  --frame: rgba(240, 180, 41, 0.28);
   align-items: center;
   text-align: center;
+  color: #f7f4ea;
   transform: translateZ(1px);
   background:
     var(--noise),
-    radial-gradient(240px 170px at 6% 4%, rgba(186, 220, 140, 0.5), transparent 70%),
-    radial-gradient(220px 170px at 100% 100%, rgba(150, 206, 196, 0.32), transparent 72%),
-    var(--mulsetu-card);
-  border: 1px solid rgba(62, 103, 0, 0.12);
+    radial-gradient(240px 170px at 8% 0%, rgba(240, 180, 41, 0.18), transparent 70%),
+    radial-gradient(220px 170px at 100% 100%, rgba(79, 156, 249, 0.16), transparent 72%),
+    #0f1220;
+  border: 1px solid rgba(240, 180, 41, 0.22);
   box-shadow:
-    0 1px 1px rgba(22, 24, 29, 0.04),
-    0 10px 20px rgba(22, 24, 29, 0.05),
-    0 30px 60px -20px rgba(22, 60, 40, 0.22);
+    0 1px 1px rgba(0, 0, 0, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.22),
+    0 30px 60px -20px rgba(0, 0, 0, 0.55);
 }
 
 .card-face-back,
 .surface-dark {
-  --frame: rgba(198, 239, 134, 0.18);
+  --frame: rgba(240, 180, 41, 0.22);
   color: white;
   background:
     var(--noise),
-    radial-gradient(260px 200px at 0% 0%, rgba(198, 239, 134, 0.14), transparent 70%),
+    radial-gradient(260px 200px at 0% 0%, rgba(240, 180, 41, 0.16), transparent 70%),
     var(--mulsetu-deep);
 }
 
@@ -300,7 +319,7 @@ body {
   }
 }
 
-/* The rule under the Mulsetu wordmark: green line, split dot, teal line. */
+/* Gold line, split dot, blue line — the TLBISBIG brand rule. */
 .brand-rule {
   display: grid;
   width: 100%;
@@ -316,11 +335,11 @@ body {
 }
 
 .brand-rule::before {
-  background: linear-gradient(90deg, transparent, rgba(62, 103, 0, 0.55));
+  background: linear-gradient(90deg, transparent, rgba(240, 180, 41, 0.7));
 }
 
 .brand-rule::after {
-  background: linear-gradient(90deg, rgba(25, 104, 108, 0.55), transparent);
+  background: linear-gradient(90deg, rgba(79, 156, 249, 0.7), transparent);
 }
 
 .brand-rule > span {
@@ -330,13 +349,14 @@ body {
   background: linear-gradient(90deg, var(--mulsetu-green) 50%, var(--mulsetu-teal) 50%);
 }
 
-.card-details a {
+.card-details a,
+.card-details p {
   display: grid;
   grid-template-columns: 16px minmax(0, 1fr);
   align-items: center;
   gap: 10px;
   font-size: 13.5px;
-  color: rgba(22, 24, 29, 0.82);
+  color: rgba(247, 244, 234, 0.86);
   text-decoration: none;
 }
 
@@ -347,7 +367,7 @@ body {
 .card-details svg {
   width: 15px;
   height: 15px;
-  color: var(--mulsetu-teal);
+  color: var(--mulsetu-green);
 }
 
 /* ---------- Contact tiles ---------- */
@@ -355,7 +375,7 @@ body {
 .contact-grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 10px;
 }
 
@@ -369,11 +389,11 @@ body {
   gap: 10px;
   border-radius: 18px;
   border: 1px solid var(--mulsetu-line);
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.04);
   padding: 12px;
   box-shadow:
-    0 1px 2px rgba(22, 24, 29, 0.04),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
   color: inherit;
   text-decoration: none;
   transition:
@@ -392,8 +412,8 @@ button.contact-tile {
 @media (hover: hover) {
   .contact-tile:hover {
     transform: translateY(-2px);
-    border-color: rgba(62, 103, 0, 0.24);
-    box-shadow: 0 12px 24px -8px rgba(22, 60, 40, 0.18);
+    border-color: rgba(240, 180, 41, 0.4);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.45);
   }
 }
 

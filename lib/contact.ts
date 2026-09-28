@@ -39,7 +39,7 @@ export function displayUrl() {
   return cardLabel;
 }
 
-export const vcardPath = "/sarvesh-gadkari.vcf";
+export const vcardPath = "/terence-l-bolden.vcf";
 
 /**
  * How "Save Contact" should behave on this browser:
@@ -63,6 +63,7 @@ export function saveContactMode(userAgent: string): "vcard" | "android" | "in-ap
 export function displayPhone(value: string) {
   const digits = value.replace(/\D/g, "");
   if (digits.length === 12 && digits.startsWith("91")) return `+91 ${digits.slice(2, 7)} ${digits.slice(7)}`;
+  if (digits.length === 11 && digits.startsWith("1")) return `+1 (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7)}`;
   return value.trim();
 }
 

@@ -6,7 +6,7 @@ import { buildVCard } from "@/lib/contact";
 export async function GET() {
   let photo: string | undefined;
   try {
-    const bytes = await readFile(join(process.cwd(), "public/profile/sarvesh-gadkari-vcf.jpg"));
+    const bytes = await readFile(join(process.cwd(), "public/profile/terence-l-bolden.jpg"));
     if (bytes.byteLength <= 70_000) photo = bytes.toString("base64");
   } catch {
     photo = undefined;
@@ -15,7 +15,7 @@ export async function GET() {
   return new NextResponse(buildVCard(photo), {
     headers: {
       "Content-Type": "text/vcard; charset=utf-8",
-      "Content-Disposition": 'inline; filename="Sarvesh-Gadkari.vcf"',
+      "Content-Disposition": 'inline; filename="Terence-L-Bolden.vcf"',
       "Cache-Control": "no-store",
     },
   });

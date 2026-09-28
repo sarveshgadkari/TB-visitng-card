@@ -69,13 +69,13 @@ export function ShareSheet({ open, onClose }: { open: boolean; onClose: () => vo
         <p className="mt-1.5 text-[13.5px] text-muted">
           {profile.title}
           <span className="px-1.5 text-ink/30">·</span>
-          Mulsetu
+          TLBISBIG
         </p>
         <p className="mt-2 text-[13px] font-medium text-leaf">{cardLabel}</p>
         <div className="mt-5 grid gap-2.5">
           <button
             type="button"
-            className="press flex h-12 items-center justify-center gap-2 rounded-full text-[14.5px] font-semibold text-white shadow-[0_10px_22px_-10px_rgba(29,104,72,0.6)]"
+            className="press flex h-12 items-center justify-center gap-2 rounded-full text-[14.5px] font-semibold text-[#07080f] shadow-[0_10px_22px_-10px_rgba(240,180,41,0.55)]"
             style={{ background: "var(--mulsetu-brand)" }}
             onClick={onShare}
             data-autofocus
@@ -88,14 +88,14 @@ export function ShareSheet({ open, onClose }: { open: boolean; onClose: () => vo
               href={whatsAppCardUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="press flex h-12 items-center justify-center gap-2 rounded-full border border-ink/10 bg-white text-[14px] font-semibold text-ink"
+              className="press flex h-12 items-center justify-center gap-2 rounded-full border border-white/10 bg-white text-[14px] font-semibold text-[#07080f]"
             >
               <MessageCircle className="size-4 text-forest" aria-hidden="true" />
               WhatsApp
             </a>
             <button
               type="button"
-              className="press flex h-12 items-center justify-center gap-2 rounded-full border border-ink/10 bg-white text-[14px] font-semibold text-ink"
+              className="press flex h-12 items-center justify-center gap-2 rounded-full border border-white/10 bg-white text-[14px] font-semibold text-[#07080f]"
               onClick={onCopy}
             >
               <Link2 className="size-4 text-teal" aria-hidden="true" />

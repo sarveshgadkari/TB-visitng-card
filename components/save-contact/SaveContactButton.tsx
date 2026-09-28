@@ -33,11 +33,11 @@ export function SaveContactButton() {
     <>
       <a
         href={vcardPath}
-        className="press flex h-13 items-center gap-3 rounded-full pr-2 pl-2 text-[15px] font-semibold text-white shadow-[0_14px_28px_-10px_rgba(29,104,72,0.55),inset_0_1px_0_rgba(255,255,255,0.18)]"
+        className="press flex h-13 items-center gap-3 rounded-full pr-2 pl-2 text-[15px] font-semibold text-[#07080f] shadow-[0_14px_28px_-10px_rgba(240,180,41,0.45),inset_0_1px_0_rgba(255,255,255,0.35)]"
         style={{ background: "var(--mulsetu-brand)" }}
         onClick={onClick}
       >
-        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-white/15">
+        <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#07080f]/12">
           <UserRound className="size-[18px]" aria-hidden="true" />
         </span>
         <span className="flex-1 tracking-[0.02em]">{label}</span>
@@ -69,10 +69,10 @@ export function SaveContactButton() {
             <strong className="text-ink">Open in browser</strong> (Safari or Chrome), then tap Save Contact again.
           </p>
           <div className="mt-3 grid grid-cols-2 gap-2">
-            <button type="button" onClick={onCopy} className="press h-10 rounded-full bg-forest text-[13px] font-semibold text-white">
+            <button type="button" onClick={onCopy} className="press h-10 rounded-full bg-forest text-[13px] font-semibold text-[#07080f]">
               {copyLabel}
             </button>
-            <a href={vcardPath} className="press flex h-10 items-center justify-center rounded-full border border-ink/10 bg-white text-[13px] font-semibold text-ink">
+            <a href={vcardPath} className="press flex h-10 items-center justify-center rounded-full border border-white/10 bg-white text-[13px] font-semibold text-[#07080f]">
               Try anyway
             </a>
           </div>
